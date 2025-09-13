@@ -83,6 +83,7 @@ struct EdmondsKarp
                 float w = matrix[u][v];
                 if (!visited[v] && w > 0){
                     parent[v] = u;
+                    visited[v] = true;
                     if (v == sink){
                         return true;
                     }
